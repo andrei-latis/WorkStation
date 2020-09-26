@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Skills";
+
+    List<WorkStationDAL.Skills> ViewTechnologySkills = ViewBag.ViewTechnologySkills;
+    List<WorkStationDAL.Skills> ViewTechnicalLanguageSkills = ViewBag.ViewTechnicalLanguageSkills;
+    List<WorkStationDAL.Skills> ViewLanguageSkills = ViewBag.ViewLanguageSkills;
+}
+
+@using (Html.BeginForm("Skills", "Admin", FormMethod.Post))
+{
+<div class="container">
+    <h4>Technology Skills</h4>
+    <hr />
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Technology Id</th>
+                <th>Technology</th>
+            </tr>
+        </thead>
+      @foreach (var VTS in ViewTechnologySkills)
+      {
+        <tbody>
+            <tr>
+                <td>@VTS.IdTechnology</td>
+                <td>@VTS.Technology</td>
+            </tr>
+        </tbody>
+      }
+    </table>
+    <div class="form-group">
+        <label>Add Technology:</label>
+        <input type="text" name="VTS" />
+        <input type="submit" />
+    </div>
+    <div class="form-group">
+        <label>Delete Technology:</label>
+        <input type="text" name="DVTS" />
+        <input type="submit" />
+    </div>
+</div>
+<br />
+<br />
+<div class="container">
+    <h4>Technical Language Skills</h4>
+    <hr />
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Technical Language Id</th>
+                <th>Technical Language</th>
+            </tr>
+        </thead>
+        @foreach (var VTLS in ViewTechnicalLanguageSkills)
+        {
+            <tbody>
+                <tr>
+                    <td>@VTLS.IdTechnicalLanguage</td>
+                    <td>@VTLS.TechnicalLanguage</td>
+                </tr>
+            </tbody>
+        }
+    </table>
+    <div class="form-group">
+        <label>Add Technical Language:</label>
+        <input type="text" name="VTLS" />
+        <input type="submit" />
+    </div>
+    <div class="form-group">
+        <label>Delete Technical Language:</label>
+        <input type="text" name="DVTLS" />
+        <input type="submit" />
+    </div>
+</div>
+<br />
+<br />
+<div class="container">
+    <h4>Language</h4>
+    <hr />
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Language Id</th>
+                <th>Language</th>
+            </tr>
+        </thead>
+        @foreach (var VLS in ViewLanguageSkills)
+        {
+            <tbody>
+                <tr>
+                    <td>@VLS.IdLanguage</td>
+                    <td>@VLS.Language</td>
+                </tr>
+            </tbody>
+        }
+    </table>
+    <div class="form-group">
+        <label>Add Language:</label>
+        <input type="text" name="VLS" />
+        <input type="submit" />
+    </div>
+    <div class="form-group">
+        <label>Delete Language:</label>
+        <input type="text" name="DVLS" />
+        <input type="submit" />
+    </div>
+</div>
+}
+

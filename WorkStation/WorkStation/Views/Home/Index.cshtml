@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+     centerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    }
+</style>
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm-12"><h1>Welcome!</h1>Here you can create or buy databases, computer applications, phone applications, websites and other services, scroll down to see more. </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12"><img src="~/Content/upload/img2/baner.jpg" alt="ol" class="img-thumbnail"></div>
+        </div>
+    </div>
+  
+</div>
+
+    <div class="container" style="background-color:#222222; border-style: solid">
+        <div class="row" style="border-style: solid">
+            <div class="col-sm-4" style="border-style: solid"><a href="@Url.Action("ShowAds", "Ad")"><img src="~/Content/upload/img2/database.jpg" alt="ol" class="img-thumbnail"></a></div>
+            <div class="col-sm-4" style="border-style: solid"><a href="@Url.Action("ShowAds", "Ad")"><img src="~/Content/upload/img2/computerapplication.jpg" alt="ol" class="img-thumbnail"></a></div>
+            <div class="col-sm-4" style="border-style: solid"><a href="@Url.Action("ShowAds", "Ad")"><img src="~/Content/upload/img2/website.jpg" alt="ol" class="img-thumbnail"></a></div>
+        </div>
+
+        <div class="row" style="border-style: solid">
+            <div class="col-sm-4" style="border-style: solid"><a href="@Url.Action("ShowAds", "Ad")"><img src="~/Content/upload/img2/phoneapplication.jpg" alt="ol" class="img-thumbnail"></a></div>
+            <div class="col-sm-4" style="border-style: solid"><a href="@Url.Action("ShowAds", "Ad")"><img src="~/Content/upload/img2/cybersecurity.jpg" alt="ol" class="img-thumbnail"></a></div>
+            <div class="col-sm-4" style="border-style: solid"><a href="@Url.Action("ShowAds", "Ad")"><img src="~/Content/upload/img2/otherthings.jpg" alt="ol" class="img-thumbnail"></a></div>
+        </div>
+    </div>
+

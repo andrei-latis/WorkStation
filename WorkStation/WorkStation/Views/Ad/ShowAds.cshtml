@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "ShowAds";
+    List<WorkStationDAL.Ads> Ads = ViewBag.AdModel;
+}
+
+@using (Html.BeginForm("NewProject", "Ad", FormMethod.Get))
+{
+<div class="container">
+    @foreach (var ad in Ads)
+    {
+        <div class="col-lg-4" style="border-style: solid; margin:auto">
+            <br />
+            <div class="tg-wrap">
+                <table style="table-layout:fixed; margin:auto; width: 331px; height: 300px; color:#999999">
+                    <colgroup>
+                        <col style="width: 80px">
+                        <col style="width: 185px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2"><img src="@ad.userProfileImg" width="64" height="64"></th>
+                            <th>@ad.userName</th>
+                        </tr>
+                        <tr>
+                            <td>*****</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" style="border-style: inset; text-align:center">@ad.AdName</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-style: inset; text-align:center">@ad.TypeProjectTxt</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-style: inset; text-align:center">@ad.AdDescription</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-style: inset; text-align:center"><img src="@ad.AdImg1" width="300" height="10" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-style: inset; text-align:end">€@ad.ProjectPrice</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:end"><input type="submit" onclick="value = @ad.IdAd" value="Insert" name='IdAd'/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br />
+        </div>
+    }
+        </div>
+}

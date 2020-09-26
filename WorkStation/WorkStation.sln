@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkStation", "WorkStation\WorkStation.csproj", "{1BC56EF4-91E1-4AFA-A9B1-539EE0589855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkStationDAL", "WorkStation - DAL\WorkStationDAL.csproj", "{8103220D-13EE-4C64-985B-3C29E13B0BF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BC56EF4-91E1-4AFA-A9B1-539EE0589855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC56EF4-91E1-4AFA-A9B1-539EE0589855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC56EF4-91E1-4AFA-A9B1-539EE0589855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC56EF4-91E1-4AFA-A9B1-539EE0589855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8103220D-13EE-4C64-985B-3C29E13B0BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8103220D-13EE-4C64-985B-3C29E13B0BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8103220D-13EE-4C64-985B-3C29E13B0BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8103220D-13EE-4C64-985B-3C29E13B0BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

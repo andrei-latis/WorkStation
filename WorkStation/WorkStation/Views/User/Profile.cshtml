@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "Profile";
+
+    List<WorkStationDAL.User> UserProfile = ViewBag.UserProfile;
+    List<WorkStationDAL.Skills> TechnicalLanguageSkills = ViewBag.TechnicalLanguageSkills;
+    List<WorkStationDAL.Skills> TechnologySkills = ViewBag.TechnologySkills;
+    List<WorkStationDAL.Skills> LanguageSkills = ViewBag.LanguageSkills;
+    List<WorkStationDAL.Project> ProjectReview = ViewBag.ProjectReview;
+}
+<div class="container" style="border-style: solid; background-color:dodgerblue; font-size: 20px; position:relative">
+    <div class="col-sm-3">
+        <div class="row" style="text-align:center">@UserProfile[0].userFirstName @UserProfile[0].userSecondName </div>
+        <div class="row" style="text-align:center">Username: @UserProfile[0].userName</div>
+    </div>
+    <div class="col-sm-3">
+        <div class="row" style="text-align:center"><a href="@Url.Action("CreateAd", "Ad")"><span class="label label-primary">Projects</span></a></div>
+    </div>
+    <div class="col-sm-3">
+        <div class="row" style="text-align:center"> <a href="@Url.Action("CreateAd", "Ad")"><span class="label label-primary">Create Ad</span></a></div>
+    </div>
+    <div class="col-sm-3">
+        <div class="row" style="text-align:center"><button type="button" class="btn btn-primary" style="font-size: 29px;">More Skills</button> </div>
+    </div>
+</div>
+<br />
+<div class="container" style="border-style: solid;  background-color:lightslategrey">
+    <div class="col-lg-3">
+        <div class="row" style="text-align:center"><img src="@UserProfile[0].userProfileImg" alt="img" class="img-thumbnail"> </div>
+    </div>
+    <div class="col-lg-9" style="text-align:start; font-size: 25px;">
+        @UserProfile[0].userBio
+    </div>
+</div>
+<br />
+<!--TechnicalLanguage-->
+<div class="container">
+    <div class="col-sm-3">
+        <div class="row" style="text-align:start; font-size: 25px;">Technical Language:</div>       
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-3" style="font-size: 17px;">
+        @try
+        {
+            foreach (var TLS in TechnicalLanguageSkills)
+            {
+                <div class="row" style="text-align:start">@TLS.TechnicalLanguage</div>
+            }
+        }
+        catch
+        {
+            <div class="row" style="text-align:center">TechnicalLanguage:ERRO</div>
+        }
+    </div>
+    <div class="col-sm-9" style="font-size: 23px; background-color:lightslategrey">
+        <div class="col-sm-2" style="text-align:start;">
+            <div class="row" style="text-align:center;"><img src="@UserProfile[0].userProfileImg" alt="img" class="img-thumbnail" style="width:64px; height:64px"> </div>
+        </div>
+        <div class="col-sm-10" style="text-align:start; ">
+            <div class="row" style="text-align:start">@ProjectReview[0].userFirstName @ProjectReview[0].userSecondName  </div>
+            <div class="row" style="text-align:start">@ProjectReview[0].Stars Stars </div>
+        </div>
+        <div class="col-sm-2" style="text-align:start; border-style: solid;">Project :</div>
+        <div class="col-sm-10" style="text-align:start; border-style: solid;">@ProjectReview[0].TypeProject</div>
+        <div class="col-sm-12" style="text-align:start; border-style: solid; ">@ProjectReview[0].Review</div>
+    </div>
+</div>
+<br />
+<!--Technology-->
+<div class="container">
+    <div class="col-sm-3">
+        <div class="row" style="text-align:start; font-size: 25px;">Technology:</div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-3" style="font-size: 17px;">
+        @try
+        {
+            foreach (var TS in TechnologySkills)
+            {
+                <div class="row" style="text-align:start">@TS.Technology</div>
+            }
+        }
+        catch
+        {
+            <div class="row" style="text-align:center">Technology:ERRO</div>
+        }
+    </div>
+    <div class="col-sm-9" style="font-size: 23px; background-color:lightslategrey">
+        <div class="col-sm-2" style="text-align:start;">
+            <div class="row" style="text-align:center;"><img src="@UserProfile[0].userProfileImg" alt="img" class="img-thumbnail" style="width:64px; height:64px"> </div>
+        </div>
+        <div class="col-sm-10" style="text-align:start;">
+            <div class="row" style="text-align:start">@ProjectReview[1].userFirstName @ProjectReview[1].userSecondName  </div>
+            <div class="row" style="text-align:start">@ProjectReview[1].Stars Stars </div>
+        </div>
+        <div class="col-sm-2" style="text-align:start; border-style: solid;">Project :</div>
+        <div class="col-sm-10" style="text-align:start; border-style: solid;">@ProjectReview[1].TypeProject</div>
+        <div class="col-sm-12" style="text-align:start; border-style: solid;">@ProjectReview[1].Review</div>
+    </div>
+</div>
+<br />
+<!--Technology-->
+<div class="container">
+    <div class="col-sm-3">
+        <div class="row" style="text-align:start; font-size: 25px;">Language:</div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-sm-3" style="font-size: 17px;">
+        @try
+        {
+            foreach (var LS in LanguageSkills)
+            {
+                <div class="row" style="text-align:start">@LS.Language</div>
+            }
+        }
+        catch
+        {
+            <div class="row" style="text-align:center">Language:ERRO</div>
+        }
+    </div>
+    <div class="col-sm-9" style="font-size: 23px; background-color:lightslategrey">
+        <div class="col-sm-2" style="text-align:start;">
+            <div class="row" style="text-align:center;"><img src="@UserProfile[0].userProfileImg" alt="img" class="img-thumbnail" style="width:64px; height:64px"> </div>
+        </div>
+        <div class="col-sm-10" style="text-align:start;">
+            <div class="row" style="text-align:start">@ProjectReview[2].userFirstName @ProjectReview[2].userSecondName  </div>
+            <div class="row" style="text-align:start">@ProjectReview[2].Stars Stars </div>
+        </div>
+        <div class="col-sm-2" style="text-align:start; border-style: solid;">Project :</div>
+        <div class="col-sm-10" style="text-align:start; border-style: solid;">@ProjectReview[2].TypeProject</div>
+        <div class="col-sm-12" style="text-align:start; border-style: solid;">@ProjectReview[2].Review</div>
+    </div>
+</div>

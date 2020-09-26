@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewImg</title>
+</head>
+<body>
+
+    <h3>Prduct Info</h3>
+        <table cellpadding="2" cellspacing="2" border="1">
+            <tr>
+                <td>ID</td>
+                <td>@ViewBag.AddImg.Id</td>
+            </tr>
+
+            <tr>
+                <td>Name</td>
+                <td>@ViewBag.AddImg.Name</td>
+            </tr>
+
+            <tr>
+                <td>Price</td>
+                <td>@ViewBag.AddImg.Price</td>
+            </tr>
+
+            <tr>
+                <td>Photo</td>
+                <td><img src="~/Content/Img/@ViewBag.AddImg.Photo" width="120"/></td>
+            </tr>
+
+        </table>
+ 
+</body>
+</html>
+
