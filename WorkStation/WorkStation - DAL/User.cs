@@ -42,9 +42,9 @@ namespace WorkStationDAL
         {
             set
             {
-                if (value.Trim().Length > 50 || value.Trim().Length < 6)
+                if (value.Trim().Length < 8 || value.Trim().Length > 22)
                 {
-                    throw new Exception("Username Should Be Between 6 And 50 Characters");
+                    throw new Exception("Username Should Be Between 8 And 22 Characters");
                 }
                 else
                 {
