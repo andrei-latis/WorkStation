@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*My own CSS*/
+
+.text-center{
+    text-align:center;
+}
